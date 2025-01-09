@@ -1,23 +1,31 @@
+/* Ensure the root div covers the full height and has a consistent background */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #add8e6; /* Set background color to light blue */
+  min-height: 100vh; /* Ensure full viewport height */
+  box-sizing: border-box;
 }
 
+/* Logo styles (unchanged) */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframe animation for spinning logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +35,37 @@
   }
 }
 
+/* Applying reduced motion preference */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card padding (unchanged) */
 .card {
   padding: 2em;
 }
 
+/* Text color for the read-the-docs section */
 .read-the-docs {
   color: #888;
 }
+
+/* Read More button styling (new update for light blue) */
+button {
+  background-color: #add8e6; /* Light blue background for all buttons */
+  color: #242424; /* Text color */
+  border-radius: 20px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button:hover {
+  background-color: #90c8e2; /* Slightly darker blue on hover */
+}
+
